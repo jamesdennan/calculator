@@ -1,11 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Poppins';
-}
-
-@font-face {
-	font-family: "Poppins";
-	src: url("../fonts/Poppins-Regular.ttf");
+    font-family: 'Zen Dots', cursive;
 }
 
 body {
@@ -18,6 +13,25 @@ body {
     height: 100vh;
     flex-direction: column;
 }
+
+.gradient-background {
+    background: linear-gradient(300deg, #00bfff, #9f4fba, #e06e5f);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
 .device-name {
     color: white;
     margin: 0px;
@@ -68,7 +82,7 @@ body {
 
 .output-container {
     grid-column: 1 / -1;
-    background-color: rgb(78, 78, 78);
+    background-color: rgb(15, 28, 63);
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -109,6 +123,7 @@ body {
 }
 .footer > a, .footer > pre {
     color: rgb(85, 10, 160);
+    font-size: large;
     text-decoration: none;
     transition: 1s;
 }
